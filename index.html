@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calCulator</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <!-- TailWind CsS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Math.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.6.0/math.min.js"></script>
+
+</head>
+<body class="sm:flex sm:justify-center sm:items-center sm:h-screen overflow-hidden">
+    <!-- Calculator -->
+    <div class="bg-[#2F2F3D] w-screen h-screen px-5 flex items-center sm:w-[352px] sm:h-[570px] sm:rounded-2xl">
+        <!-- Container -->
+        <div class="w-full flex flex-col gap-10 mb-3">
+            <!-- Text Area -->
+            <div>
+                <input id="text-area" class="text-right text-[30px] align-bottom w-full h-20 pr-[30px] text-white bg-[#2F2F3D] caret-white" type="text">
+            </div>
+            <!-- Buttons -->
+            <div class="grid grid-cols-4 gap-y-2 w-full">
+                <button onclick="allClear()" class="text-white justify-self-center bg-[#4C5766] text-xl flex items-center justify-center p-5 h-16 w-16 rounded-full">AC</button>
+                <button onclick="addToTextarea(this)" class="text-white justify-self-center bg-[#4C5766] text-xl flex items-center justify-center p-5 h-16 w-16 rounded-full">%</button>
+                <button onclick="ce()" class="text-white justify-self-center bg-[#4C5766] text-xl flex items-center justify-center p-5 h-16 w-16 rounded-full">CE</button>
+                <button onclick="addToTextarea(this)" class="text-white justify-self-center bg-[#EA7A00] text-xl flex items-center justify-center p-5 h-16 w-16 rounded-full">/</button>
+                <button onclick="addToTextarea(this)" class="text-white justify-self-center bg-[#313744] text-xl flex items-center justify-center p-5 h-16 w-16 rounded-full">7</button>
+                <button onclick="addToTextarea(this)" class="text-white justify-self-center bg-[#313744] text-xl flex items-center justify-center p-5 h-16 w-16 rounded-full">8</button>
+                <button onclick="addToTextarea(this)" class="text-white justify-self-center bg-[#313744] text-xl flex items-center justify-center p-5 h-16 w-16 rounded-full">9</button>
+                <button onclick="addToTextarea(this)" class="text-white justify-self-center bg-[#EA7A00] text-xl flex items-center justify-center p-5 h-16 w-16 rounded-full">*</button>
+                <button onclick="addToTextarea(this)" class="text-white justify-self-center bg-[#313744] text-xl flex items-center justify-center p-5 h-16 w-16 rounded-full">4</button>
+                <button onclick="addToTextarea(this)" class="text-white justify-self-center bg-[#313744] text-xl flex items-center justify-center p-5 h-16 w-16 rounded-full">5</button>
+                <button onclick="addToTextarea(this)" class="text-white justify-self-center bg-[#313744] text-xl flex items-center justify-center p-5 h-16 w-16 rounded-full">6</button>
+                <button onclick="addToTextarea(this)" class="text-white justify-self-center bg-[#EA7A00] text-xl flex items-center justify-center p-5 h-16 w-16 rounded-full">-</button>
+                <button onclick="addToTextarea(this)" class="text-white justify-self-center bg-[#313744] text-xl flex items-center justify-center p-5 h-16 w-16 rounded-full">1</button>
+                <button onclick="addToTextarea(this)" class="text-white justify-self-center bg-[#313744] text-xl flex items-center justify-center p-5 h-16 w-16 rounded-full">2</button>
+                <button onclick="addToTextarea(this)" class="text-white justify-self-center bg-[#313744] text-xl flex items-center justify-center p-5 h-16 w-16 rounded-full">3</button>
+                <button onclick="addToTextarea(this)" class="text-white justify-self-center bg-[#EA7A00] text-xl flex items-center justify-center p-5 h-16 w-16 rounded-full">+</button>
+                <button onclick="addToTextarea(this)" class="text-white justify-self-center bg-[#313744] text-xl flex items-center justify-center p-5 h-16 w-16 rounded-full">00</button>
+                <button onclick="addToTextarea(this)" class="text-white justify-self-center bg-[#313744] text-xl flex items-center justify-center p-5 h-16 w-16 rounded-full">0</button>
+                <button onclick="addToTextarea(this)" class="text-white justify-self-center bg-[#313744] text-xl flex items-center justify-center p-5 h-16 w-16 rounded-full">.</button>
+                <button onclick="calculate()" class="text-white justify-self-center bg-[#EA7A00] text-xl flex items-center justify-center p-5 h-16 w-16 rounded-full">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
